@@ -1,0 +1,133 @@
+/* styles.css */
+
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+  }
+
+  .images {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  .navbar {
+    background-color: #17bdf0;
+    border: 1px solid #707070;
+  }
+  
+  .navbar .nav-link, .navbar .navbar-brand {
+    color: #fff;
+    
+  }
+  
+  .navbar .nav-link:hover {
+    color: #052952; /* Warna hover untuk link */
+  }
+  
+  /* Hero section */
+  .hero {
+    background: linear-gradient(45deg, #007bff, #00d4ff);
+    color: white;
+    padding: 100px 0;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+  }
+  
+  .hero .btn-primary {
+    background-color: #ffd700;
+    border-color: #ffd700;
+    color: #333;
+  }
+  
+  .hero .btn-primary:hover {
+    background-color: #ffc107;
+    border-color: #ffc107;
+  }
+
+  .hero-section {
+    background-image: url('../img/images.jpg'); /* Ganti dengan path yang benar */
+    background-size: cover; /* Membuat gambar menutupi seluruh area section */
+    background-position: center; /* Menempatkan gambar di tengah */
+    background-repeat: no-repeat; /* Mencegah gambar berulang */
+    height: 100vh; /* Membuat section setinggi viewport */
+    position: relative;
+  }
+  
+  .hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay gelap di atas gambar */
+    z-index: 1; /* Meletakkan overlay di atas gambar */
+  }
+  
+  .hero-section .container {
+    position: relative;
+    z-index: 2; /* Meletakkan konten di atas overlay */
+  }
+  
+  
+  /* About page styles */
+  .card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card h5 {
+    color: #007bff;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+  }
+  
+  /* Contact page styles */
+  form label {
+    color: #007bff;
+  }
+  
+  form .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  
+  form .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+  }
+
+
+  .falling-text {
+    display: inline-block;
+    opacity: 0; /* Agar tulisan awalnya tidak terlihat */
+    animation: fall 2s ease-out forwards; /* Durasi 2 detik */
+  }
+
+  @keyframes fall {
+    0% {
+      transform: translateY(-100px); /* Memulai dari posisi di atas */
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0); /* Berakhir di posisi aslinya */
+      opacity: 1;
+    }
+  }
+  
